@@ -1,0 +1,13 @@
+<div{{attributes}}>
+	<div class="my-5">
+		<input type="text" data-model='query' placeholder="Search for a post..." class="max-w-screen-sm p-2 mx-auto text-center border-2 rounded-md border-slate-400 text-slate-500">
+	</div>
+	{% set posts = this.posts %}
+	<div class="grid grid-cols-3 gap-4 m-10">
+		{% for item in posts %}
+			<a href="{{ path('app_post_show', {slug: item.slug}) }}" class="p-4 rounded-md bg-slate-100 hover:bg-slate-300">
+				{{item.title}}
+			</a>
+		{% endfor %}
+	</div>
+</div>
