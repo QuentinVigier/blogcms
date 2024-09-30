@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\PostRepository;
+use DateTimeImmutable;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -65,6 +66,7 @@ class Post
     public function __construct()
     {
         $this->labels = new ArrayCollection();
+        $this->published_at = new \DateTimeImmutable();
     }
 
 

@@ -33,6 +33,7 @@ class Category
     public function __construct()
     {
         $this->posts = new ArrayCollection();
+        $this->image = 'default.png';
     }
 
     public function getId(): ?int
